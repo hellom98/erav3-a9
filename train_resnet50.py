@@ -106,14 +106,14 @@ class AlbumentationsTransform:
         return self.transform(image=img_array)['image']
 
 
-# Load ImageNet-mini dataset
+# Load dataset
 train_dataset = datasets.ImageFolder(
-    root='imagenet-mini/train',
+    root='imagenet/train',
     transform=AlbumentationsTransform(train_transform)
 )
 
 val_dataset = datasets.ImageFolder(
-    root='imagenet-mini/val',
+    root='imagenet/val',
     transform=AlbumentationsTransform(val_transform)
 )
 
@@ -146,7 +146,7 @@ def find_lr(model, train_loader, batch_size, optimizer, criterion, device):
         len(train_loader.dataset), subset_size, replace=False)
     subset = torch.utils.data.Subset(train_loader.dataset, subset_indices)
     subset_loader = DataLoader(
-        subset, batch_size=batch_size, shuffle=True, num_workers=4, persistent_workers=True, prefetch_factor=2, pin_memory=True)
+        subset, batch_size=batch_size, shuffle=True, num_workers=8, persistent_workers=True, prefetch_factor=4, pin_memory=True)
 
     lr_finder = LRFinder(model_copy, optimizer_copy,
                          criterion, device=device, grad_scaler=scaler)
@@ -179,7 +179,7 @@ def setup_logging(log_dir):
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description='Train ResNet50 on ImageNet-mini')
+        description='Train ResNet50 on ImageNet')
     parser.add_argument('--resume', type=str,
                         help='Path to checkpoint to resume from')
     parser.add_argument('--batch-size', type=int, default=256)
@@ -342,9 +342,9 @@ def main():
 
     # Initialize data loaders with argument batch size
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size,
-                              sampler=train_sampler, shuffle=False, num_workers=4, pin_memory=True)
+                              sampler=train_sampler, shuffle=False, num_workers=8, pin_memory=True)
     val_loader = DataLoader(val_dataset, batch_size=args.batch_size,
-                            shuffle=False, num_workers=4, pin_memory=True)
+                            shuffle=False, num_workers=8, pin_memory=True)
 
     # Find the best learning rate
     # logging.info("Finding best learning rate...")
@@ -540,6 +540,10 @@ def validate(top_k=(1, 5)):
 
 
 if __name__ == '__main__':
-    multiprocessing.set_start_method('spawn')
+    since = datetime.now()
+    print(f"Start time: {since}")
+    # multiprocessing.set_start_method('spawn')
     print(f"Using device: {device}")
     main()
+    till = datetime.now()
+    print(f"End time: {till}")
