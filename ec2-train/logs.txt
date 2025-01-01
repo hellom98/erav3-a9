@@ -1,0 +1,324 @@
+Start time: 2024-12-29 21:40:21.745081
+Using device: cuda
+2024-12-29 21:40:21,747 [INFO] S3 backup enabled - Bucket: training-imagenet, Prefix: outputs
+2024-12-29 21:40:21,747 [INFO] Training with configuration: {'resume': None, 'batch_size': 512, 'epochs': 100, 'save_freq': 5, 'data_dir': 'imagenet', 'output_dir': 'outputs/imagenet/', 's3_bucket': 'training-imagenet', 's3_prefix': 'outputs'}
+Epoch 1/100: 100%|██████████| 2503/2503 [35:25<00:00,  1.18it/s, loss=6.941, acc=0.14%, lr=0.001000, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-29 22:16:17,564 [INFO] Epoch 1: Train Acc=0.14%, Loss=6.9408, Top-1=0.16%, Top-5=0.73%
+Epoch 2/100:  75%|███████▍  | 1866/2503 [26:20<08:58,  1.18it/s, loss=6.806, acc=0.42%, lr=0.010900, eta=539s]
+Epoch 2/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=6.727, acc=0.65%, lr=0.010900, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-29 22:52:05,751 [INFO] Epoch 2: Train Acc=0.65%, Loss=6.7274, Top-1=1.91%, Top-5=6.56%
+Epoch 3/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=5.939, acc=4.45%, lr=0.020800, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-29 23:27:54,684 [INFO] Epoch 3: Train Acc=4.45%, Loss=5.9390, Top-1=7.51%, Top-5=19.79%
+Epoch 4/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=5.282, acc=10.82%, lr=0.030700, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 00:03:43,193 [INFO] Epoch 4: Train Acc=10.82%, Loss=5.2822, Top-1=14.25%, Top-5=33.16%
+Epoch 5/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=4.743, acc=18.15%, lr=0.040600, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 00:39:31,961 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_5.pth
+2024-12-30 00:39:32,203 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2024-12-30 00:39:33,388 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_5.pth
+2024-12-30 00:39:33,673 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-30 00:39:35,338 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-30 00:39:35,359 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-30 00:39:35,359 [INFO] Epoch 5: Train Acc=18.15%, Loss=4.7426, Top-1=20.72%, Top-5=43.44%
+Epoch 6/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=4.322, acc=24.93%, lr=0.050500, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 01:15:23,863 [INFO] Epoch 6: Train Acc=24.93%, Loss=4.3219, Top-1=28.87%, Top-5=54.19%
+Epoch 7/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=3.992, acc=30.88%, lr=0.060400, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 01:51:11,772 [INFO] Epoch 7: Train Acc=30.88%, Loss=3.9916, Top-1=32.09%, Top-5=57.73%
+Epoch 8/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=3.754, acc=35.34%, lr=0.070300, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-30 02:27:00,865 [INFO] Epoch 8: Train Acc=35.34%, Loss=3.7539, Top-1=36.00%, Top-5=62.09%
+Epoch 9/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=3.585, acc=38.67%, lr=0.080200, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-30 03:02:50,204 [INFO] Epoch 9: Train Acc=38.67%, Loss=3.5854, Top-1=37.35%, Top-5=64.57%
+Epoch 10/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=3.465, acc=41.12%, lr=0.090100, eta=0s]
+/opt/conda/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-30 03:38:39,103 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_10.pth
+2024-12-30 03:38:40,367 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_10.pth
+2024-12-30 03:38:40,778 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-30 03:38:42,179 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-30 03:38:42,197 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-30 03:38:42,197 [INFO] Epoch 10: Train Acc=41.12%, Loss=3.4650, Top-1=40.84%, Top-5=67.33%
+Epoch 11/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=3.378, acc=42.85%, lr=0.100000, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.32it/s]
+2024-12-30 04:14:30,962 [INFO] Epoch 11: Train Acc=42.85%, Loss=3.3784, Top-1=43.12%, Top-5=69.40%
+Epoch 12/100:  17%|█▋        | 429/2503 [06:06<29:13,  1.18it/s, loss=3.296, acc=44.51%, lr=0.099970, eta=1771s]
+Epoch 12/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=3.280, acc=44.91%, lr=0.099970, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-30 04:50:20,530 [INFO] Epoch 12: Train Acc=44.91%, Loss=3.2798, Top-1=46.48%, Top-5=73.10%
+Epoch 13/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=3.208, acc=46.51%, lr=0.099878, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-30 05:26:10,041 [INFO] Epoch 13: Train Acc=46.51%, Loss=3.2082, Top-1=43.31%, Top-5=70.26%
+Epoch 14/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=3.151, acc=47.69%, lr=0.099726, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-30 06:01:59,161 [INFO] Epoch 14: Train Acc=47.69%, Loss=3.1511, Top-1=46.77%, Top-5=72.94%
+Epoch 15/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=3.106, acc=48.65%, lr=0.099513, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 06:37:47,834 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_15.pth
+2024-12-30 06:37:51,004 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_15.pth
+2024-12-30 06:37:51,448 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-30 06:37:53,236 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-30 06:37:53,256 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-30 06:37:53,256 [INFO] Epoch 15: Train Acc=48.65%, Loss=3.1063, Top-1=48.14%, Top-5=74.89%
+Epoch 16/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=3.068, acc=49.52%, lr=0.099240, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 07:13:41,755 [INFO] Epoch 16: Train Acc=49.52%, Loss=3.0682, Top-1=49.87%, Top-5=75.87%
+Epoch 17/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=3.038, acc=50.12%, lr=0.098907, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 07:49:30,553 [INFO] Epoch 17: Train Acc=50.12%, Loss=3.0379, Top-1=51.31%, Top-5=77.20%
+Epoch 18/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=3.009, acc=50.79%, lr=0.098515, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.32it/s]
+2024-12-30 08:25:18,834 [INFO] Epoch 18: Train Acc=50.79%, Loss=3.0089, Top-1=48.62%, Top-5=74.39%
+Epoch 19/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.983, acc=51.35%, lr=0.098063, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 09:01:08,029 [INFO] Epoch 19: Train Acc=51.35%, Loss=2.9827, Top-1=52.27%, Top-5=78.18%
+Epoch 20/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=2.961, acc=51.77%, lr=0.097553, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-30 09:36:56,654 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_20.pth
+2024-12-30 09:36:58,518 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_20.pth
+2024-12-30 09:36:58,543 [INFO] Epoch 20: Train Acc=51.77%, Loss=2.9614, Top-1=50.56%, Top-5=76.67%
+Epoch 21/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.940, acc=52.27%, lr=0.096985, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-30 10:12:47,169 [INFO] Epoch 21: Train Acc=52.27%, Loss=2.9402, Top-1=52.65%, Top-5=78.40%
+Epoch 22/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.921, acc=52.69%, lr=0.096359, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-30 10:48:35,977 [INFO] Epoch 22: Train Acc=52.69%, Loss=2.9215, Top-1=54.08%, Top-5=79.45%
+Epoch 23/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.906, acc=52.98%, lr=0.095677, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-30 11:24:24,645 [INFO] Epoch 23: Train Acc=52.98%, Loss=2.9064, Top-1=53.56%, Top-5=78.76%
+Epoch 24/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.888, acc=53.45%, lr=0.094940, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-30 12:00:14,073 [INFO] Epoch 24: Train Acc=53.45%, Loss=2.8880, Top-1=55.92%, Top-5=80.95%
+Epoch 25/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.874, acc=53.79%, lr=0.094147, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-30 12:36:03,316 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_25.pth
+2024-12-30 12:36:04,759 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_25.pth
+2024-12-30 12:36:04,780 [INFO] Epoch 25: Train Acc=53.79%, Loss=2.8739, Top-1=55.53%, Top-5=80.52%
+Epoch 26/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.862, acc=53.99%, lr=0.093301, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-30 13:11:54,530 [INFO] Epoch 26: Train Acc=53.99%, Loss=2.8619, Top-1=54.82%, Top-5=80.21%
+Epoch 27/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.847, acc=54.35%, lr=0.092402, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-30 13:47:44,241 [INFO] Epoch 27: Train Acc=54.35%, Loss=2.8471, Top-1=56.45%, Top-5=81.61%
+Epoch 28/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.836, acc=54.62%, lr=0.091452, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-30 14:23:33,511 [INFO] Epoch 28: Train Acc=54.62%, Loss=2.8358, Top-1=56.57%, Top-5=81.07%
+Epoch 29/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.823, acc=54.87%, lr=0.090451, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 14:59:22,851 [INFO] Epoch 29: Train Acc=54.87%, Loss=2.8227, Top-1=56.96%, Top-5=81.66%
+Epoch 30/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.812, acc=55.14%, lr=0.089401, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 15:35:12,227 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_30.pth
+2024-12-30 15:35:13,614 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_30.pth
+2024-12-30 15:35:13,635 [INFO] Epoch 30: Train Acc=55.14%, Loss=2.8119, Top-1=56.66%, Top-5=81.38%
+Epoch 31/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=2.800, acc=55.40%, lr=0.088302, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-30 16:11:02,405 [INFO] Epoch 31: Train Acc=55.40%, Loss=2.8000, Top-1=55.12%, Top-5=80.19%
+Epoch 32/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.789, acc=55.70%, lr=0.087157, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 16:46:51,493 [INFO] Epoch 32: Train Acc=55.70%, Loss=2.7890, Top-1=57.29%, Top-5=82.07%
+Epoch 33/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.777, acc=55.93%, lr=0.085967, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 17:22:40,439 [INFO] Epoch 33: Train Acc=55.93%, Loss=2.7773, Top-1=57.81%, Top-5=82.25%
+Epoch 34/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.767, acc=56.15%, lr=0.084733, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 17:58:29,486 [INFO] Epoch 34: Train Acc=56.15%, Loss=2.7669, Top-1=58.94%, Top-5=82.76%
+Epoch 35/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.756, acc=56.39%, lr=0.083457, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-30 18:34:18,591 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_35.pth
+2024-12-30 18:34:19,942 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_35.pth
+2024-12-30 18:34:19,963 [INFO] Epoch 35: Train Acc=56.39%, Loss=2.7555, Top-1=58.02%, Top-5=82.03%
+Epoch 36/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.746, acc=56.64%, lr=0.082139, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-30 19:10:09,229 [INFO] Epoch 36: Train Acc=56.64%, Loss=2.7456, Top-1=59.28%, Top-5=83.43%
+Epoch 37/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.737, acc=56.83%, lr=0.080783, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 19:45:57,996 [INFO] Epoch 37: Train Acc=56.83%, Loss=2.7370, Top-1=57.13%, Top-5=81.83%
+Epoch 38/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.723, acc=57.15%, lr=0.079389, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-30 20:21:47,596 [INFO] Epoch 38: Train Acc=57.15%, Loss=2.7225, Top-1=58.76%, Top-5=82.74%
+Epoch 39/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.713, acc=57.39%, lr=0.077960, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-30 20:57:36,507 [INFO] Epoch 39: Train Acc=57.39%, Loss=2.7126, Top-1=59.25%, Top-5=83.31%
+Epoch 40/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.702, acc=57.70%, lr=0.076496, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 21:33:25,835 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_40.pth
+2024-12-30 21:33:28,148 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_40.pth
+2024-12-30 21:33:28,582 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-30 21:33:29,837 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-30 21:33:29,858 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-30 21:33:29,858 [INFO] Epoch 40: Train Acc=57.70%, Loss=2.7020, Top-1=59.91%, Top-5=83.56%
+Epoch 41/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=2.693, acc=57.85%, lr=0.075000, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-30 22:09:18,297 [INFO] Epoch 41: Train Acc=57.85%, Loss=2.6925, Top-1=58.29%, Top-5=82.44%
+Epoch 42/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.681, acc=58.12%, lr=0.073474, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-30 22:45:07,661 [INFO] Epoch 42: Train Acc=58.12%, Loss=2.6812, Top-1=59.70%, Top-5=83.59%
+Epoch 43/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.669, acc=58.41%, lr=0.071919, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-30 23:20:57,174 [INFO] Epoch 43: Train Acc=58.41%, Loss=2.6695, Top-1=59.74%, Top-5=83.42%
+Epoch 44/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.662, acc=58.60%, lr=0.070337, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-30 23:56:46,158 [INFO] Epoch 44: Train Acc=58.60%, Loss=2.6623, Top-1=60.97%, Top-5=84.22%
+Epoch 45/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.648, acc=58.89%, lr=0.068730, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 00:32:35,414 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_45.pth
+2024-12-31 00:32:37,048 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_45.pth
+2024-12-31 00:32:37,474 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-31 00:32:39,375 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 00:32:39,396 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 00:32:39,396 [INFO] Epoch 45: Train Acc=58.89%, Loss=2.6477, Top-1=61.29%, Top-5=84.49%
+Epoch 46/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.638, acc=59.13%, lr=0.067101, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 01:08:28,472 [INFO] Epoch 46: Train Acc=59.13%, Loss=2.6384, Top-1=61.59%, Top-5=84.79%
+Epoch 47/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.627, acc=59.40%, lr=0.065451, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 01:44:18,268 [INFO] Epoch 47: Train Acc=59.40%, Loss=2.6269, Top-1=58.67%, Top-5=82.87%
+Epoch 48/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.617, acc=59.63%, lr=0.063782, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 02:20:07,365 [INFO] Epoch 48: Train Acc=59.63%, Loss=2.6172, Top-1=61.64%, Top-5=84.73%
+Epoch 49/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.605, acc=59.95%, lr=0.062096, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 02:55:56,786 [INFO] Epoch 49: Train Acc=59.95%, Loss=2.6045, Top-1=61.49%, Top-5=84.87%
+Epoch 50/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.593, acc=60.20%, lr=0.060396, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-31 03:31:46,699 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_50.pth
+2024-12-31 03:31:47,962 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_50.pth
+2024-12-31 03:31:48,390 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-31 03:31:50,294 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 03:31:50,315 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 03:31:50,315 [INFO] Epoch 50: Train Acc=60.20%, Loss=2.5935, Top-1=62.68%, Top-5=85.39%
+Epoch 51/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.582, acc=60.49%, lr=0.058682, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 04:07:39,703 [INFO] Epoch 51: Train Acc=60.49%, Loss=2.5823, Top-1=62.72%, Top-5=85.18%
+Epoch 52/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.571, acc=60.79%, lr=0.056959, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 04:43:28,760 [INFO] Epoch 52: Train Acc=60.79%, Loss=2.5708, Top-1=62.10%, Top-5=85.02%
+Epoch 53/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.558, acc=61.07%, lr=0.055226, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 05:19:17,791 [INFO] Epoch 53: Train Acc=61.07%, Loss=2.5581, Top-1=62.31%, Top-5=85.01%
+Epoch 54/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.546, acc=61.37%, lr=0.053488, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 05:55:06,688 [INFO] Epoch 54: Train Acc=61.37%, Loss=2.5463, Top-1=62.97%, Top-5=85.49%
+Epoch 55/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.532, acc=61.64%, lr=0.051745, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 06:30:56,110 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_55.pth
+2024-12-31 06:30:57,520 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_55.pth
+2024-12-31 06:30:57,541 [INFO] Epoch 55: Train Acc=61.64%, Loss=2.5321, Top-1=62.75%, Top-5=85.17%
+Epoch 56/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.522, acc=61.91%, lr=0.050000, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 07:06:46,800 [INFO] Epoch 56: Train Acc=61.91%, Loss=2.5220, Top-1=64.19%, Top-5=86.34%
+Epoch 57/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.507, acc=62.27%, lr=0.048255, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 07:42:36,041 [INFO] Epoch 57: Train Acc=62.27%, Loss=2.5073, Top-1=63.00%, Top-5=85.69%
+Epoch 58/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.494, acc=62.55%, lr=0.046512, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-31 08:18:25,619 [INFO] Epoch 58: Train Acc=62.55%, Loss=2.4945, Top-1=64.06%, Top-5=86.29%
+Epoch 59/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.482, acc=62.89%, lr=0.044774, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 08:54:14,876 [INFO] Epoch 59: Train Acc=62.89%, Loss=2.4818, Top-1=64.26%, Top-5=86.41%
+Epoch 60/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.468, acc=63.23%, lr=0.043041, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 09:30:04,367 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_60.pth
+2024-12-31 09:30:05,854 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_60.pth
+2024-12-31 09:30:06,280 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-31 09:30:07,748 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 09:30:07,769 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 09:30:07,769 [INFO] Epoch 60: Train Acc=63.23%, Loss=2.4684, Top-1=64.64%, Top-5=86.61%
+Epoch 61/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.455, acc=63.53%, lr=0.041318, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 10:05:57,269 [INFO] Epoch 61: Train Acc=63.53%, Loss=2.4554, Top-1=66.40%, Top-5=87.86%
+Epoch 62/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.441, acc=63.82%, lr=0.039604, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 10:41:46,841 [INFO] Epoch 62: Train Acc=63.82%, Loss=2.4409, Top-1=66.59%, Top-5=87.81%
+Epoch 63/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.427, acc=64.24%, lr=0.037904, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 11:17:36,312 [INFO] Epoch 63: Train Acc=64.24%, Loss=2.4270, Top-1=65.91%, Top-5=87.54%
+Epoch 64/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.414, acc=64.52%, lr=0.036218, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 11:53:26,037 [INFO] Epoch 64: Train Acc=64.52%, Loss=2.4139, Top-1=67.07%, Top-5=88.01%
+Epoch 65/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.397, acc=64.89%, lr=0.034549, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 12:29:15,186 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_65.pth
+2024-12-31 12:29:16,466 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_65.pth
+2024-12-31 12:29:16,900 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-31 12:29:18,831 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 12:29:18,852 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 12:29:18,852 [INFO] Epoch 65: Train Acc=64.89%, Loss=2.3975, Top-1=67.64%, Top-5=88.52%
+Epoch 66/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.382, acc=65.27%, lr=0.032899, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 13:05:08,458 [INFO] Epoch 66: Train Acc=65.27%, Loss=2.3816, Top-1=66.48%, Top-5=87.80%
+Epoch 67/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=2.368, acc=65.65%, lr=0.031270, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 13:40:57,041 [INFO] Epoch 67: Train Acc=65.65%, Loss=2.3677, Top-1=67.53%, Top-5=88.27%
+Epoch 68/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.352, acc=65.98%, lr=0.029663, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 14:16:46,629 [INFO] Epoch 68: Train Acc=65.98%, Loss=2.3525, Top-1=68.23%, Top-5=88.87%
+Epoch 69/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.337, acc=66.43%, lr=0.028081, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.29it/s]
+2024-12-31 14:52:35,869 [INFO] Epoch 69: Train Acc=66.43%, Loss=2.3375, Top-1=68.03%, Top-5=88.68%
+Epoch 70/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.320, acc=66.81%, lr=0.026526, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-31 15:28:25,299 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_70.pth
+2024-12-31 15:28:26,732 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_70.pth
+2024-12-31 15:28:27,154 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-31 15:28:28,350 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 15:28:28,375 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 15:28:28,375 [INFO] Epoch 70: Train Acc=66.81%, Loss=2.3200, Top-1=69.11%, Top-5=89.27%
+Epoch 71/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.305, acc=67.27%, lr=0.025000, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.32it/s]
+2024-12-31 16:04:17,125 [INFO] Epoch 71: Train Acc=67.27%, Loss=2.3047, Top-1=69.92%, Top-5=89.86%
+Epoch 72/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.286, acc=67.65%, lr=0.023504, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 16:40:05,900 [INFO] Epoch 72: Train Acc=67.65%, Loss=2.2858, Top-1=69.12%, Top-5=89.30%
+Epoch 73/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.271, acc=68.05%, lr=0.022040, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 17:15:54,810 [INFO] Epoch 73: Train Acc=68.05%, Loss=2.2713, Top-1=69.94%, Top-5=89.93%
+Epoch 74/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.253, acc=68.49%, lr=0.020611, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 17:51:43,506 [INFO] Epoch 74: Train Acc=68.49%, Loss=2.2531, Top-1=69.91%, Top-5=89.67%
+Epoch 75/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.236, acc=68.96%, lr=0.019217, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 18:27:32,734 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_75.pth
+2024-12-31 18:27:35,230 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_75.pth
+2024-12-31 18:27:35,658 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-31 18:27:36,800 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 18:27:36,821 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 18:27:36,822 [INFO] Epoch 75: Train Acc=68.96%, Loss=2.2363, Top-1=71.03%, Top-5=90.35%
+Epoch 76/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.220, acc=69.36%, lr=0.017861, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 19:03:25,800 [INFO] Epoch 76: Train Acc=69.36%, Loss=2.2204, Top-1=71.45%, Top-5=90.68%
+Epoch 77/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.201, acc=69.85%, lr=0.016543, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 19:39:14,675 [INFO] Epoch 77: Train Acc=69.85%, Loss=2.2014, Top-1=71.98%, Top-5=90.85%
+Epoch 78/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=2.182, acc=70.32%, lr=0.015267, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.28it/s]
+2024-12-31 20:15:03,324 [INFO] Epoch 78: Train Acc=70.32%, Loss=2.1825, Top-1=71.98%, Top-5=90.78%
+Epoch 79/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.167, acc=70.70%, lr=0.014033, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-31 20:50:52,051 [INFO] Epoch 79: Train Acc=70.70%, Loss=2.1666, Top-1=71.93%, Top-5=90.82%
+Epoch 80/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.148, acc=71.19%, lr=0.012843, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.30it/s]
+2024-12-31 21:26:41,425 [INFO] Checkpoint saved locally: outputs/imagenet/checkpoint_epoch_80.pth
+2024-12-31 21:26:42,640 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/checkpoint_epoch_80.pth
+2024-12-31 21:26:43,073 [INFO] Best model saved locally: outputs/imagenet/model_best.pth
+2024-12-31 21:26:44,289 [INFO] Successfully uploaded checkpoint to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 21:26:44,309 [INFO] Best model saved to s3://training-imagenet/outputs/model_best.pth
+2024-12-31 21:26:44,309 [INFO] Epoch 80: Train Acc=71.19%, Loss=2.1480, Top-1=72.13%, Top-5=91.04%
+Epoch 81/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.129, acc=71.72%, lr=0.011698, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-31 22:02:33,232 [INFO] Epoch 81: Train Acc=71.72%, Loss=2.1295, Top-1=72.80%, Top-5=91.29%
+Epoch 82/100: 100%|██████████| 2503/2503 [35:19<00:00,  1.18it/s, loss=2.111, acc=72.18%, lr=0.010599, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.32it/s]
+2024-12-31 22:38:21,954 [INFO] Epoch 82: Train Acc=72.18%, Loss=2.1107, Top-1=73.75%, Top-5=91.82%
+Epoch 83/100: 100%|██████████| 2503/2503 [35:18<00:00,  1.18it/s, loss=2.092, acc=72.67%, lr=0.009549, eta=0s]
+Validating: 100%|██████████| 98/98 [00:29<00:00,  3.31it/s]
+2024-12-31 23:14:10,483 [INFO] Epoch 83: Train Acc=72.67%, Loss=2.0919, Top-1=73.81%, Top-5=92.01%
+Epoch 84/100:  65%|██████▌   | 1635/2503 [23:05<12:13,  1.18it/s, loss=2.071, acc=73.20%, lr=0.008548, eta=736s]
